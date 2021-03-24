@@ -1,2 +1,2 @@
 # RemoteControl
-Mobile app, server and windows service to send different keys to your computer
+Mobile app, server and windows client to send different keys to your computer
