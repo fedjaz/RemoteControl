@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileClient.ControlPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions ="Center" HorizontalOptions="CenterAndExpand" WidthRequest="300">
+            <Grid>
+                <Button Text="Restart"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="StartAndExpand"
+                    WidthRequest="100"
+                    Clicked="Reload_Clicked"/>
+                <Frame Padding="0"
+                       HorizontalOptions="End"
+                       VerticalOptions="End"
+                       CornerRadius="10"
+                       Margin="2">
+                    <Image BackgroundColor="Red"
+                        HeightRequest="15"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        WidthRequest="15"
+                        x:Name="statusCircle"/>
+                </Frame>
+            </Grid>
+            <Image BackgroundColor="Gray"
+                   HeightRequest="300"
+                   x:Name="TouchBar">
+            </Image>
+
+            <Grid>
+                <Button Text="Right"
+                VerticalOptions="Center" 
+                HorizontalOptions="EndAndExpand"
+                WidthRequest="150"
+                Pressed="RightMouse_Pressed"
+                Released="RightMouse_Released"/>
+                
+                <Button Text="Left"
+                VerticalOptions="Center" 
+                HorizontalOptions="StartAndExpand"
+                WidthRequest="150"
+                Pressed="LeftMouse_Pressed"
+                Released="LeftMouse_Released"/>
+            </Grid>
+            <Grid>
+                <Button Text="&gt;"
+                VerticalOptions="Center" 
+                HorizontalOptions="EndAndExpand"
+                WidthRequest="75"
+                Clicked="Right_Clicked"/>
+
+                <Button Text="Space"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                WidthRequest="150"
+                Clicked="Space_Clicked"/>
+
+                <Button Text="&lt;"
+                VerticalOptions="Center" 
+                HorizontalOptions="StartAndExpand"
+                WidthRequest="75"
+                Clicked="Left_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
