@@ -1,0 +1,23 @@
+version: "3.9"
+
+networks:
+    remotecontrol_network:
+        name: remotecontrol_network
+
+services:
+    nginx:
+        image: fedjaz/easynginx
+        restart: always
+        networks:
+            - remotecontrol_network
+        environment:
+            listen: 2754
+            proxy_pass: "http://remotecontrol:80"
+        ports:
+            - "60500:2754"
+            
+    remotecontrol:
+        image: fedjaz/remotecontrol
+        restart: always
+        networks:
+            - remotecontrol_network
